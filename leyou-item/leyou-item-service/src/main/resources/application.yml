@@ -1,0 +1,22 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: item-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/localhost_mysql
+    username: root
+    password: root123
+    hikari:
+      max-lifetime: 28830000
+      maximum-pool-size: 9
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    instance-id: ${spring.application.name}:${server.port}
+    lease-renewal-interval-in-seconds: 5 # 5秒钟发送一次心跳
+    lease-expiration-duration-in-seconds: 10
