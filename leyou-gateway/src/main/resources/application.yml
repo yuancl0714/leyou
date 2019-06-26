@@ -16,6 +16,7 @@ zuul:
   retryable: true # 开启重试
   routes:
     item-service: /item/**
+
 hystrix:
   command:
     default:
