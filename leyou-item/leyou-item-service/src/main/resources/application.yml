@@ -10,6 +10,7 @@ spring:
     hikari:
       max-lifetime: 28830000
       maximum-pool-size: 9
+    driver-class-name: com.mysql.jdbc.Driver
 eureka:
   client:
     service-url:
